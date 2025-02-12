@@ -771,6 +771,7 @@ top: 100px;
         }
         .services-list div{
             font-size: 12px;
+            width: 200px;;
         }
         .services-list div i{
             font-size: 20px; 
