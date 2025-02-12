@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gavi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://kit.fontawesome.com/e076f0f8b4.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <!-- <h1 class="logo-text spinning">Gavi</h1> -->
+                <img class="logo-text spinning" width="80px" height="80px" src="images/image00001.png">
+                <ul id="sidemenue">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Designs</a></li>
+                    <li><a href="#portfolio">Collection</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenue()"></i>
+                </ul>
+
+                <i id="bars" class="fa-solid fa-bars" onclick="openmenue()"></i>
+
+            </nav>
+
+            <div class="header-text">
+                <p>Expression of  <span >Artistry </span></p>
+                <h1> <span id="typed"></span> </h1>
+            </div>
+
+        </div>
+        
+    </div>
+
+<!------------------About-------------------->
+
+    <div id="about">
+        <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/image00002.jpeg">
+                    </div>
+                        <div class="about-col-2">
+                            <h1 class="sub-title">About Us</h1>
+                            <p class="about-para" >Proudly South African Gavi, Is more than just a name—it’s our philosophy. 
+                                We’re dedicated to producing the highest quality leather goods,bridging the gap between 
+                                passionate leather enthusiasts and exceptional craftsmanship. From the heart of Africa to the world, 
+                                stitch in every piece we create stands as a testament to our heritage, expertise, 
+                                and commitment to excellence. We believe that anything that can go right, will go right, 
+                                because perfection is our standard.</p>
+                                
+                                <br>
+
+                                <div class="tab-titles">
+                                    <p class="tab-links active-link" onclick="opentab('skills');" >Music</p>                                    
+                                    <p class="tab-links" onclick="opentab('education');">Stores</p>
+                                    <p class="tab-links" onclick="opentab('experience');">Latest News</p>
+                                </div>
+
+                                <div class="tab-contents active-tab" id="skills"> 
+                                    <ul>
+                                        <li><span>Traxsource</span><br>Gavi Music available on <a href="https://www.traxsource.com">Traxsource.com</a></li>
+                                        <li><span>Youtube</span><br>All Media content available on  <a href="https://music.youtube.com/watch?v=vvmyH6QYmOI">youtube</a></li>
+                                        <li><span>Apple Music</span><br>Gavi Music also available on apple platforms for streaming</li>
+                                        <li><span>Spotify</span><br>Gavi Music also available on <a href="https://www.traxsource.com">Spotify</a></li>
+                                        <li><span>BandCamp</span><br>Gavi Music also available on BandCamp</li>
+                                    </ul>
+                                </div>                               
+                                <div class="tab-contents" id="education">
+                                    <ul>
+                                        <li><span>Lowkal Store</span><br> Lowkal SA, Shop, 256 Sisulu St, Pretoria Central, Pretoria, 0002 <br> Phone : 060 317 6878</li>                                                              
+                                    </ul>
+                                </div>
+                                <div class="tab-contents" id="experience">
+                                    <ul>
+                                        <li><span></span><br>FH Chamberlain <br> * 2022 - current</li>
+                                        <li><span>Back-End Developer</span><br>Informatics Communication Engagement Projects <br> * 2021</li>
+                                        <li><span>Front-End Developer</span><br>Desigining the user interface for mobile application <br> and front-end development <br>  * 2022</li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <!------------------Services--------------------->
+      
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title" style="text-align: center;">Designs</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Web Development</h2>
+                        <p>Developing complex web applications that interact with databases and provide dynamic user experiences.<br>
+                            Building the client-side (frontend) and server-side (backend) components of websites and applications.</p>
+                        <a href="#">More...</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-palette"></i>
+                        <h2>UI/UX Design</h2>
+                        <p>Detailed prototypes that include design elements (colors, typography, images). Tools like Figma,<br> 
+                            Adobe XD, and Sketch allow for more polished designs.<br>
+                            Creating clickable prototypes that simulate user interactions, providing a more realistic experience. <br>
+                            This helps in visualizing user flows and gathering feedback.
+                        </p>
+                        <a href="#">More...</a>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <h2>Mobile Applications</h2>
+                        <p>creating software applications that run on mobile devices, such as smartphones and tablets.<br>
+                            For example, Native Apps are Developed specifically for one platform like iOS or Android <br> 
+                            using platform-specific languages (Swift for iOS, Kotlin/Java for Android).
+                            Cross-Platform Apps are built to work on multiple platforms using React or Flutter.
+                        </p>
+                        <a href="#">More...</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!------------------Portfolio-------------------->
+
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title" style="text-align: center;">Collection</h1>
+                <div class="work-list">
+                    <div class="work">
+                            <img src="images/image00007.jpeg" alt="">
+                            <div class="layer">
+                                    <h3>Epicene backpack</h3>
+                                    <p>Premium black leather with a sleek black embossed design and a luxurious velvet lining.This gives the description a more polished and enticing feel while maintaining all the key details.</p>
+                                    <a href=""><i class="fa-solid fa-link"></i></a>
+                                </div>
+                    </div>
+                    <div class="work">
+                        <img src="/images/image00006.jpeg" alt="">
+                        <div class="layer">
+                            <h3>Epicene backpack</h3>
+                            <p>Premium black leather with a black embossed design and a luxurious velvet lining.This gives the description a more polished and enticing feel while maintaining all the key details.</p>
+                            <a href=""><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/image00005.jpeg" alt="">
+                        <div class="layer">
+                            <h3>Epicene backpack</h3>
+                            <p>Premium black leather with a white embossed design and a luxurious velvet lining.This gives the description a more polished and enticing feel while maintaining all the key details.</p>
+                            <a href=""><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>               
+                    <div class="work">
+                        <img src="images/image00006.jpeg" alt="">
+                        <div class="layer">
+                            <h3>Epicene backpack</h3>
+                            <p>Premium black leather with a black embossed design and a luxurious velvet lining.This gives the description a more polished and enticing feel while maintaining all the key details.</p>
+                            <a href=""><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+
+                    
+                                   
+                </div>
+            </div>
+        </div>      
+        <br>
+        
+        <br>
+         <!-- ----------------Contact------------------ -->
+        <br>
+         <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title" >Contact Us</h1>
+                        <p><i class=""></i>gavinmagopane74@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i> 0791236546</p>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/gavinchainz/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="0791236546"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+
+                      
+                        
+                    </div>
+                    <div class="contact-right">
+                   <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name">
+                    <input type="text" name="Email" placeholder="Your Email">
+                    <textarea name="Message"  rows="6" placeholder="Type Your Message Here..."></textarea>
+                    <button type="submit" class="btn btn2" >Submit</button>
+                   </form>                  
+                    </div>
+                    <div id="popup" class="popup-card">
+                            <p id="msg"></p>
+                         </div>
+                </div>
+            </div>
+            <div class="footer">
+                <p>© 2025 Gavi. All rights reserved.  Gavi™ is a trademark of Gavi Inc. <br>
+                    All trademarks, logos, and copyrights  are the property 
+                    of their respective owners. </p>
+            </div>
+         </div>
+         <script type="text/javascript" src="code.js"></script>
+         
+         <script type="text/javascript" src="code2.js"></script>
+
+<script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+
+
+<script type="text/javascript" src="code3.js"></script>
+
+
+</body>
+
+</html>
