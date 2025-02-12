@@ -765,20 +765,23 @@ top: 100px;
 
         .work-list{
             
-            grid-template-columns: repeat(auto-fit, minmax(130px,1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
             padding: 40px;
            
         }
+        .services-list{
+            grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+        }
         .services-list div{
             font-size: 12px;
-            
+          
         }
         .services-list div i{
-            font-size: 20px; 
+            font-size: 16px; 
             margin-bottom: 30px;
         }
         .services-list div h2{
-            font-size: 16px; 
+            font-size: 14px; 
             
         
         }
