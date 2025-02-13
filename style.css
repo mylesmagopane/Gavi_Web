@@ -287,7 +287,7 @@ transition: 0.6s;
 
 .work-list{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px,250px));
     grid-gap:40px;
     margin-top:50px;
     font-size: 12px;
@@ -781,12 +781,12 @@ top: 100px;
 
         .work-list{
             
-            grid-template-columns: repeat(auto-fit, minmax(245px,1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
             padding: 40px;
            
         }
         .services-list{
-            grid-template-columns: repeat(auto-fit, minmax(245px,1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
         }
         .services-list div{
             font-size: 12px;

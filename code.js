@@ -4,7 +4,7 @@ var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents")
 
 var typed = new Typed('#typed',{
-    strings : ["Crafted for Confidence","Designed for Life","Genuine Leather" +"","Enduring Style","Timeless Quality","Leather that Grows with You."],
+    strings : ["Crafted for Confidence","Designed for Life","Genuine Leather" +"","Enduring Style","Timeless Quality","Companion for Life."],
     typeSpeed: 180,
     backSpeed : 180,
     loop : true}   
