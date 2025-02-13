@@ -26,19 +26,33 @@
     background-image: url(images/image00005.jpeg);
     background-size: cover;
     background-position: center;  
-    overflow: hidden;
+    /* overflow: hidden; */
     font-family: 'Pacifico', cursive;
+    position: relative;
+
     }
 
 .container{
     padding: 10px 10% 10px 10%; 
     }
 
+    #mainNav{
+        position: fixed;
+        Top: 0;
+        background: linear-gradient(rgba(255, 255, 255, 200),#ffffff);
+        right: 0;
+        left: 0;  
+        z-index: 9999; 
+       
+    }
+
+
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;  
+    position: relative;
 }
 .logo{
     width: 140px;
@@ -99,11 +113,13 @@ nav ul li a:hover::after{
 }
 
 
+
+
+
 /* ----------------------------About-------------------------- */
 
 #about{
-    padding: 80px 0;
-   
+    padding: 80px 0;  
 }
 
 .row{
@@ -137,6 +153,8 @@ nav ul li a:hover::after{
 .tab-titles{
     display: flex;
     margin: 20px 0 40px;  
+    /* position: relative; */
+   
 }
 
 .tab-links{
@@ -145,6 +163,7 @@ nav ul li a:hover::after{
     font-weight: 500;
     cursor: pointer;
     position: relative;
+   
 }
 
 .tab-links:after{
@@ -176,6 +195,7 @@ nav ul li a:hover::after{
     left: 0;
     bottom: -10px;
     border-radius: 50px;
+    
 } 
 
 .tab-contents ul li{
@@ -217,8 +237,7 @@ transition: 0.6s;
     font-size: 12px;
     font-weight: 300;
     border-radius: 25px;
-    transition: background 0.8s, transform 0.8s;
-    
+    transition: background 0.8s, transform 0.8s;    
     height: 350px;
     border: 1px solid #167508;;
 }
@@ -257,7 +276,7 @@ transition: 0.6s;
     font-size: 12.5px;
     transition: font-size 0.8s, transform 0.8s;
     background: linear-gradient(rgba(255, 255, 255, 0.6),#dbffd3);
-transform: translateY(-20px);
+    transform: translateY(-20px);
 }
 
 /* ------------------Portfolio-------------------- */
@@ -378,8 +397,7 @@ transform: translateY(-20px);
  .contact-left p i{
     color: #000000;
     margin-right: 15px;
-    font-size: 16px;
-    
+    font-size: 16px;   
  }
  .contact-left a{
     margin-left: 20px;
@@ -437,9 +455,8 @@ form input, form textarea{
     background: linear-gradient(rgba(255, 255, 255, 255),#dbffd3);
     position: fixed;
     bottom: 0;
-    
-    
 }
+
 
 nav .fa-solid{
     display: none;
@@ -450,15 +467,14 @@ nav .fa-bars{
 }
 
 
-.popup-card{
-  
+.popup-card{ 
 width: 300px;
 height: 100px;
 border: thin;
 border-radius: 50px;
 background: linear-gradient(rgba(255, 255, 255, 0.6),#dbffd3);
 display: none;
-/* position: absolute; */
+position: absolute; 
 margin: auto;
 text-align: center;
 padding: 50px;
@@ -473,6 +489,7 @@ top: 100px;
 }
 
 /* ---------------------------------Responsiveness------------------------------- */
+
 
 @media only screen and (max-width:1100px) and (min-width:600px) {
 
@@ -634,15 +651,13 @@ top: 100px;
 
 @media only screen and (max-width:600px) {
   
-    #header{
-        
+    #header{       
         height: 80vh;
-        padding-right: 100%;
-        
+        padding-right: 100%;       
         background-image: url(images/image00008_4.jpg);
         display: grid;
-        
         }
+        
     .nav{
         justify-content:center;
     }
@@ -664,8 +679,7 @@ top: 100px;
     }
   
     .header-text{
-        margin-top: 100%;
-    
+  
         margin-top: 130px;     
     }
     .header-text .h1{
@@ -702,6 +716,8 @@ top: 100px;
         font-weight: 100;
         font-size: 12px;
       }
+
+
     
         nav ul .fa-solid{
             display: block;
@@ -765,12 +781,12 @@ top: 100px;
 
         .work-list{
             
-            grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+            grid-template-columns: repeat(auto-fit, minmax(245px,1fr));
             padding: 40px;
            
         }
         .services-list{
-            grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+            grid-template-columns: repeat(auto-fit, minmax(245px,1fr));
         }
         .services-list div{
             font-size: 12px;
@@ -807,6 +823,18 @@ top: 100px;
         }
     
 }
+
+
+
+
+
+
+
+/* Effect automation */
+
+
+
+
 
 
 
