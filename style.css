@@ -36,14 +36,13 @@
     padding: 10px 10% 10px 10%; 
     }
 
-    #mainNav{
+    #mainNav{   
         position: fixed;
         Top: 0;
-        background: linear-gradient(rgba(255, 255, 255, 100),#ffffff);
+        background: linear-gradient(rgba(255, 255, 255, 0.9),#ffffff);
         right: 0;
         left: 0;  
-        z-index: 9999; 
-       
+        z-index: 9999;     
     }
 
 
@@ -831,7 +830,6 @@ top: 100px;
 
 
 /* Effect automation */
-
 
 
 
