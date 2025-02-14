@@ -38,7 +38,83 @@
         </div>
         
     </div>
+<!-- Slide -->
+<div class="container">
+<div class="slide-kontainer">
+    <div class="slides">
+        <img src="images/collection/image00002.jpeg" class="imgClass active">
+        <img src="images/collection/image00007.jpeg" class="imgClass">
+        <img src="images/collection/image00005.jpeg" class="imgClass">
+       
 
+    </div>
+
+    <div class="buttons">
+        <span class="next" >&#10095;</span>
+        <span class="prev">&#10094;</span>
+    </div>
+
+    <div class="dotsContainer">
+        <div class="dot active" attr='0'></div>
+        <div class="dot"  attr='1'></div>
+        <div class="dot" attr='2'></div>
+     
+    </div>
+   
+
+</div>
+
+</div>
+
+<script type="text/javascript">
+
+let slideImages = document.querySelectorAll('.imgClass');
+let next = document.querySelector('.next');
+let prev = document.querySelector('.prev');
+let dots = document.querySelectorAll('.dot');
+
+const tot = slideImages.length;
+var counter = 0;
+var selectedCount = 0;
+
+next.addEventListener('click',slideNext);
+function slideNext(){
+    slideImages[counter].style.animation = 'next1 0.6s ease-in forwards';
+    if(counter < slideImages.length-1 && counter >= 0){
+        
+        counter ++;
+        // next.style ='visibility: hidden;'
+    }
+    else{
+        counter=0
+    }
+    slideImages[counter].style.animation = 'next2 0.6s ease-in forwards';
+}
+
+prev.addEventListener('click',slidePrev);
+function slidePrev(){
+    slideImages[counter].style.animation = 'prev1 0.6s ease-in forwards';
+    if(counter > 0 && counter <= slideImages.length-1){
+        
+        counter --;
+        // prev.style ='visibility: hidden;'
+    }
+    else{
+        counter = slideImages.length-1
+    }
+    slideImages[counter].style.animation = 'prev2 0.6s ease-in forwards';
+}
+
+function autoSliding(){
+    deleteInterval = setInterval(timer,5000);
+    function timer(){
+        slideNext();
+    }
+}
+
+ autoSliding();
+
+</script>
 
 <!------------------About-------------------->
 <div>
@@ -176,7 +252,7 @@
                                 (22L)
                                 35cm H x 26cm W x 18cm D (approx.)
                                 95% Genuine leather 5% denim
-                                Colour Shown: White/Black
+                                Colour Shown: White label
                                 Style: Epicene
                                 Country/Region of Origin: RSA</p></p>
                             <a href=""><i class="fa-solid fa-link"></i></a>
@@ -191,12 +267,12 @@
                                 (22L)
                                 35cm H x 26cm W x 18cm D (approx.)
                                 95% Genuine leather 5% denim
-                                Colour Shown: Navy/Black
+                                Colour Shown: Black label
                                 Style: Epicene
                                 Country/Region of Origin: RSA</p>
                             <a href=""><i class="fa-solid fa-link"></i></a>
                         </div>
-                        <p style="text-align: center;">Epicene Backpack - Navy label <br>R999.99 </p>
+                        <p style="text-align: center;">Epicene Backpack - Black label <br>R999.99 </p>
                     </div>         
                 </div>
             </div>
@@ -214,7 +290,8 @@
                         <p><i class=""></i>gavinmagopane74@gmail.com</p>
                         <p><i class="fa-solid fa-phone"></i> 0791236546</p>
                         <div class="social-icons">
-                            <a href="https://www.instagram.com/gavinchainz/"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/gaviartistry_?igsh=YTBsYTI2ZDBrdDRs&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/gaviartistry_?igsh=YTBsYTI2ZDBrdDRs&utm_source=qr"><i class="fa-brands fa-tiktok"></i></a>
                             <a href="0791236546"><i class="fa-brands fa-whatsapp"></i></a>
                         </div>
 

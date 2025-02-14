@@ -18,22 +18,22 @@ form.addEventListener('submit', e => {
 })
 
 
-emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS User ID
+// emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS User ID
 
-  document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+//   document.getElementById("contact-form").addEventListener("submit", function(event) {
+//     event.preventDefault();
 
-    var templateParams = {
-      from_name: document.getElementById("name").value,
-      from_email: document.getElementById("email").value,
-      message: document.getElementById("message").value
-    };
+//     var templateParams = {
+//       from_name: document.getElementById("name").value,
+//       from_email: document.getElementById("email").value,
+//       message: document.getElementById("message").value
+//     };
 
-    // Send the email via EmailJS
-    emailjs.send("service_n7woq7i", "YOUR_TEMPLATE_ID", templateParams)
-      .then(function(response) {
-        alert("Message sent successfully!");
-      }, function(error) {
-        alert("Failed to send message: " + error.text);
-      });
-  });
+//     // Send the email via EmailJS
+//     emailjs.send("service_n7woq7i", "YOUR_TEMPLATE_ID", templateParams)
+//       .then(function(response) {
+//         alert("Message sent successfully!");
+//       }, function(error) {
+//         alert("Failed to send message: " + error.text);
+//       });
+//   });
