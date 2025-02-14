@@ -10,6 +10,10 @@
     <script src="https://kit.fontawesome.com/e076f0f8b4.js" crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+    
 </head>
 
 <body>
@@ -302,10 +306,10 @@ function autoSliding(){
                         
                     </div>
                     <div class="contact-right">
-                   <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name">
-                    <input type="text" name="Email" placeholder="Your Email">
-                    <textarea name="Message"  rows="6" placeholder="Type Your Message Here..."></textarea>
+                   <form name="submit-to-google-sheet" id="contact-form">
+                    <input type="text" name="Name" id="name1" placeholder="Your Name">
+                    <input type="text" name="Email" id="email1" placeholder="Your Email">
+                    <textarea name="Message"  rows="6" id="message1" placeholder="Type Your Message Here..."></textarea>
                     <button type="submit" class="btn btn2" >Submit</button>
                    </form>                  
                     </div>
@@ -314,8 +318,37 @@ function autoSliding(){
                          </div>
                 </div>
             </div>
+
+            <script type="text/javascript">
+
+(function(){
+      emailjs.init({
+        publicKey: "8zAGFr9Z96ebqEwPW",
+      });
+   })();
+                        emailjs.init("8zAGFr9Z96ebqEwPW"); // Replace with your EmailJS User ID
+
+                        document.getElementById("contact-form").addEventListener("submit", function(event) {
+                        event.preventDefault();
+
+                        var templateParams = {
+                            from_name: document.getElementById("name1").value,
+                            from_email: document.getElementById("email1").value,
+                            message: document.getElementById("message1").value
+                        };
+
+                        // Send the email via EmailJS
+                        emailjs.send("service_n7woq7i", "template_dethrle", templateParams)
+                            .then(function(response) {
+                            alert("Message sent successfully!");
+                            }, function(error) {
+                            alert("Failed to send message: " + error.text);
+                            });
+                        });
+            </script>
             
          </div>
+         <br><br><br><br>
          <div class="footer">
                 <p>© 2025 Gavi. All rights reserved.  Gavi™ is a trademark of Gavi Inc. <br>
                     All trademarks, logos, and copyrights  are the property 
