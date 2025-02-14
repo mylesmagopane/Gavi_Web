@@ -22,11 +22,12 @@
             <nav id="mainNav">
                 <!-- <h1 class="logo-text spinning">Gavi</h1> -->
                 <img class="logo-text spinning" width="80px" height="80px" src="images/image00001.png">
-                <ul id="sidemenue"> <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Statements</a></li>
-                    <li><a href="#portfolio">Collection</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul id="sidemenue"> 
+                    <li><a href="#header" class="navCont active"  onclick="selectedIndex();">Home</a></li>
+                    <li><a href="#about" class="navCont" onclick="selectedIndex();">About Us</a></li>
+                    <li><a href="#services" class="navCont" onclick="selectedIndex();">Statements</a></li>
+                    <li><a href="#portfolio" class="navCont" onclick="selectedIndex();">Collection</a></li>
+                    <li><a href="#contact" class="navCont" onclick="selectedIndex();">Contact</a></li>
                     <i class="fa-solid fa-xmark" onclick="closemenue()"></i>
                 </ul>
 
@@ -60,7 +61,7 @@
         <span class="prev">&#10094;</span>
     </div>
 
-    <div class="dotsContainer">
+    <div class="dotsContainer" style="display: none;">
         <div class="dot active" attr='0'></div>
         <div class="dot"  attr='1'></div>
         <div class="dot" attr='2'></div>
@@ -149,7 +150,7 @@ function autoSliding(){
                                 <div class="tab-titles">                                                                      
                                     <p class="tab-links active-link" onclick="opentab('education');">Stores</p>
                                     <p class="tab-links" onclick="opentab('experience');">Latest News</p>
-                                    <p style="visibility: hidden;" class="tab-links" onclick="opentab('skills');" >Music</p>
+                                    <p style="display: none;" class="tab-links" onclick="opentab('skills');" >Music</p>
                                 </div>
 
                                 <div class="tab-contents" id="skills"> 
