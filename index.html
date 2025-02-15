@@ -22,11 +22,12 @@
             <nav id="mainNav">
                 <!-- <h1 class="logo-text spinning">Gavi</h1> -->
                 <img class="logo-text spinning" width="80px" height="80px" src="images/image00001.png">
-                <ul id="sidemenue"> <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Statements</a></li>
-                    <li><a href="#portfolio">Collection</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <ul id="sidemenue"> 
+                    <li><a href="#header" class="navCont active"  onclick="selectedIndex();">Home</a></li>
+                    <li><a href="#about" class="navCont" onclick="selectedIndex();">About Us</a></li>
+                    <li><a href="#services" class="navCont" onclick="selectedIndex();">Statements</a></li>
+                    <li><a href="#portfolio" class="navCont" onclick="selectedIndex();">Collection</a></li>
+                    <li><a href="#contact" class="navCont" onclick="selectedIndex();">Contact</a></li>
                     <i class="fa-solid fa-xmark" onclick="closemenue()"></i>
                 </ul>
 
@@ -60,7 +61,7 @@
         <span class="prev">&#10094;</span>
     </div>
 
-    <div class="dotsContainer">
+    <div class="dotsContainer" style="display: none;">
         <div class="dot active" attr='0'></div>
         <div class="dot"  attr='1'></div>
         <div class="dot" attr='2'></div>
@@ -136,7 +137,7 @@ function autoSliding(){
                         <div class="about-col-2">
 
                             <h1 class="sub-title">About Us</h1>
-
+<br>
                             <p class="about-para" >Proudly South African Gavi, Is more than just a name—it’s our philosophy. 
                                 We’re dedicated to producing the highest quality leather goods,bridging the gap between 
                                 passionate leather enthusiasts and exceptional craftsmanship. From the heart of Africa to the world, 
@@ -147,9 +148,9 @@ function autoSliding(){
                                 <br>
 
                                 <div class="tab-titles">                                                                      
-                                    <p class="tab-links active-link" onclick="opentab('education');">Stores</p>
-                                    <p class="tab-links" onclick="opentab('experience');">Latest News</p>
-                                    <p style="visibility: hidden;" class="tab-links" onclick="opentab('skills');" >Music</p>
+                                    <p class="tab-links active-link" onclick="opentab('education');"><i class="fa-solid fa-cart-shopping"></i>   Shop</p>
+                                    <p class="tab-links" onclick="opentab('experience');"><i class="fa-regular fa-newspaper"></i>   News</p>
+                                    <p style="display: none;" class="tab-links" onclick="opentab('skills');" >Music</p>
                                 </div>
 
                                 <div class="tab-contents" id="skills"> 
@@ -180,6 +181,54 @@ function autoSliding(){
 
         <!------------------Services--------------------->
       
+        <div id="services1" class="major-service">
+            <div class="container">
+                <h1 class="sub-title" style="text-align: center;">Statements</h1>
+                <div class="services-list">
+                    <div class="slider-container">
+                    <div class="slider">
+                    <div class="card active">
+                        <!-- <i class="fa-solid fa-code"></i> -->
+                        <h2>Mission</h2>
+                        <p>Our mission is to provide an unparalleled user experience by focusing on quality, comfort, and innovation. 
+                            We are committed to exceeding customer expectations by delivering products that enhance everyday life, 
+                            prioritize customer satisfaction, and foster long-term relationships built on trust and excellence.
+                           </p>
+                        <!-- <a href="#">More...</a> -->
+                    </div>
+                    <div  class="card">
+                        <!-- <i class="fa-solid fa-palette"></i> -->
+                        <h2>Vision</h2>
+                        <p>To be the leading provider of high-quality bags that empower individuals to express their unique 
+                            style while minimizing environmental impact. We aim to inspire positive change in fashion by offering 
+                            stylish products. We strive to set new standards for sustainability, 
+                            innovation, and craftsmanship, creating a brand that not only transforms the way people accessorize but also promotes 
+                            a responsible, mindful approach to consumption. 
+                        </p>
+                        <!-- <a href="#">More...</a> -->
+                    </div>
+                    <div  class="card">
+                        <!-- <i class="fa-solid fa-mobile-screen-button"></i> -->
+                        <h2>Fun Fact</h2>
+                        <p>Gavin is a traditional Celtic male name that originated in Scotland and other Celtic nations. It is the Scottish variation 
+                            of the medieval Welsh name Gawain, which means 'God send' or 'white hawk.' The white hawk is a powerful symbol of love, loyalty, 
+                            and steadfastness, often associated with Sir Gawain, one of the legendary Knights of King Arthur's Round Table.
+                        </p>
+                        <!-- <a href="#">More...</a> -->
+                    </div>
+
+                    <div class="buttons2" style="display: none;">
+                        <span class="forth" >&#10095;</span>
+                        <span class="back">&#10094;</span>
+                    </div>
+
+                </div>
+                </div>
+            </div>
+
+            </div>
+        </div>
+
         <div id="services">
             <div class="container">
                 <h1 class="sub-title" style="text-align: center;">Statements</h1>
@@ -217,6 +266,55 @@ function autoSliding(){
 
             </div>
         </div>
+
+
+        <script type="text/javascript">
+                let slideCard = document.querySelectorAll('.card');
+                let forward = document.querySelector('.forth');
+                let backward = document.querySelector('.back');
+                
+
+                const total = slideImages.length;
+                var counter = 0;
+                var selectedCount = 0;
+
+                next.addEventListener('click',slideNext);
+                function slideNext(){
+                    slideCard[counter].style.animation = 'next1 0.6s ease-in forwards';
+                    if(counter < slideCard.length-1 && counter >= 0){
+                        
+                        counter ++;
+                        // next.style ='visibility: hidden;'
+                    }
+                    else{
+                        counter=0
+                    }
+                    slideCard[counter].style.animation = 'next2 0.6s ease-in forwards';
+                }
+
+                prev.addEventListener('click',slidePrev);
+                function slidePrev(){
+                    slideCard[counter].style.animation = 'prev1 0.6s ease-in forwards';
+                    if(counter > 0 && counter <= slideCard.length-1){
+                        
+                        counter --;
+                        // prev.style ='visibility: hidden;'
+                    }
+                    else{
+                        counter = slideCard.length-1
+                    }
+                    slideCard[counter].style.animation = 'prev2 0.6s ease-in forwards';
+                }
+
+                function autoSliding(){
+                    deleteInterval = setInterval(timer,5000);
+                    function timer(){
+                        slideNext();
+                    }
+                }
+
+                autoSliding();
+        </script>
 
         <!------------------Portfolio-------------------->
 
