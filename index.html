@@ -178,7 +178,7 @@ function autoSliding(){
                     </div>
                 </div>
         </div>
-
+<br>
         <!------------------Services--------------------->
       
         <div id="services1" class="major-service">
@@ -274,46 +274,46 @@ function autoSliding(){
                 let backward = document.querySelector('.back');
                 
 
-                const total = slideImages.length;
-                var counter = 0;
+                const total = slideCard.length;
+                var counter1 = 0;
                 var selectedCount = 0;
 
-                next.addEventListener('click',slideNext);
-                function slideNext(){
-                    slideCard[counter].style.animation = 'next1 0.6s ease-in forwards';
-                    if(counter < slideCard.length-1 && counter >= 0){
+                next.addEventListener('click',slideForth);
+                function slideForth(){
+                    slideCard[counter1].style.animation = 'next1 0.6s ease-in forwards';
+                    if(counter1 < slideCard.length-1 && counter >= 0){
                         
-                        counter ++;
+                        counter1 ++;
                         // next.style ='visibility: hidden;'
                     }
                     else{
-                        counter=0
+                        counter1=0
                     }
-                    slideCard[counter].style.animation = 'next2 0.6s ease-in forwards';
+                    slideCard[counter1].style.animation = 'next2 0.6s ease-in forwards';
                 }
 
-                prev.addEventListener('click',slidePrev);
-                function slidePrev(){
-                    slideCard[counter].style.animation = 'prev1 0.6s ease-in forwards';
-                    if(counter > 0 && counter <= slideCard.length-1){
+                prev.addEventListener('click',slideBack);
+                function slideBack(){
+                    slideCard[counter1].style.animation = 'prev1 0.6s ease-in forwards';
+                    if(counter1 > 0 && counter1 <= slideCard.length-1){
                         
-                        counter --;
+                        counter1 --;
                         // prev.style ='visibility: hidden;'
                     }
                     else{
                         counter = slideCard.length-1
                     }
-                    slideCard[counter].style.animation = 'prev2 0.6s ease-in forwards';
+                    slideCard[counter1].style.animation = 'prev2 0.6s ease-in forwards';
                 }
 
-                function autoSliding(){
+                function autoSliding1(){
                     deleteInterval = setInterval(timer,5000);
                     function timer(){
-                        slideNext();
+                        slideForth();
                     }
                 }
 
-                autoSliding();
+                autoSliding1();
         </script>
 
         <!------------------Portfolio-------------------->
