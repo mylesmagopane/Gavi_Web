@@ -88,20 +88,6 @@ nav ul li a:hover::after{
     content: '';
     width: 80%;
     height: 2px;
-<<<<<<< HEAD
-=======
-    background:#167508;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    border-radius: 10px;
-}
-
-.navCont .active{
-    content: '';
-    width: 80%;
-    height: 2px;
->>>>>>> adfe001c866d1074de02faa3f4a5cef00bf08cd4
     background:#167508;
     position: absolute;
     left: 0;
@@ -335,11 +321,7 @@ background-color: #000;
 .tab-links:hover::after{
     content: '';
     width: 5%;
-<<<<<<< HEAD
     height: 1px;
-=======
-    height: 2px;
->>>>>>> adfe001c866d1074de02faa3f4a5cef00bf08cd4
     background: #167508;
     position: absolute;
     left: 0;
@@ -350,11 +332,7 @@ background-color: #000;
  .tab-links.active-link:after{
     content: '';
     width: 80%;
-<<<<<<< HEAD
     height: 1px;
-=======
-    height: 2px;
->>>>>>> adfe001c866d1074de02faa3f4a5cef00bf08cd4
     background: #167508;
     left: 0;
     bottom: 5px;
@@ -966,11 +944,7 @@ top: 100px;
         }
       
         .about-col-1{
-<<<<<<< HEAD
             margin: 0px 0px 0px;
-=======
-            margin-bottom: 30px;
->>>>>>> adfe001c866d1074de02faa3f4a5cef00bf08cd4
             display: none;
             transition: 0.8s ease-in;
         }
@@ -1004,37 +978,23 @@ top: 100px;
 
         .tab-links{     
             margin-right: auto;
-<<<<<<< HEAD
             font-size: 12px;
             font-weight:100;
-=======
-            font-size: 15px;
->>>>>>> adfe001c866d1074de02faa3f4a5cef00bf08cd4
         }
 
         .tab-contents ul li{
             list-style: none;
-<<<<<<< HEAD
             margin: 5px 0;
             font-size: 12px;
             padding: 0px 0px 0px 0px;
-=======
-            margin: 10px 0;
-            font-size: 12px;
->>>>>>> adfe001c866d1074de02faa3f4a5cef00bf08cd4
         }
         
         .tab-contents ul li span{
             color:#167508;
-<<<<<<< HEAD
             font-size: 12px;
             font-weight: bold;
             padding: 10px 0px 0px 0px;
            
-=======
-            font-size: 15px;
-            font-weight: bold;
->>>>>>> adfe001c866d1074de02faa3f4a5cef00bf08cd4
         }
         .tab-titles{
             display: flex;
@@ -1126,7 +1086,6 @@ top: 100px;
         .fa-brands{
             font-size: 22px;
         }
-<<<<<<< HEAD
 
         #services{
             display: none;
@@ -1134,8 +1093,6 @@ top: 100px;
         .major-service{
             display: unset;
         }
-=======
->>>>>>> adfe001c866d1074de02faa3f4a5cef00bf08cd4
     
 }
 
