@@ -846,6 +846,13 @@ top: 100px;
             font-weight: bold;
         }
 
+        .work-list{
+    
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            padding: 20px 0px 0px 0px;
+           
+        }
+
        .contact-left, .contact-right{
             flex-basis: 150%;       
         }
@@ -1069,9 +1076,10 @@ top: 100px;
         .work-list{
     
             grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-            padding: 20px 0px 0px 0px;
+            padding: 20px 0px 20px 0px;
            
         }
+      
         .services-list{
             margin-top:20px; 
             padding: 10px 0px;
@@ -1129,6 +1137,7 @@ top: 100px;
         }
         .major-service{
             display: unset;
+            
         }
     
 }
